@@ -6,6 +6,24 @@ A simple Pastebin clone built with Next.js for a take-home assignment. Create an
 
 **Deployed Application**: https://pastebin-lite-phi-seven.vercel.app
 
+## 📸 Screenshots
+
+### Homepage
+![Homepage](screenshots/homepage.png)
+*Clean, modern interface for creating pastes with optional TTL and view limits*
+
+### Paste Creation
+![Paste Created](screenshots/paste-created.png)
+*Success confirmation with shareable URL and paste details*
+
+### Paste View
+![Paste View](screenshots/paste-view.png)
+*Secure content display with metadata and interactive features*
+
+### Error Handling
+![Error 404](screenshots/error-404.png)
+*User-friendly error pages for expired or invalid pastes*
+
 ## How to Run Locally
 
 1. Clone the repository:
