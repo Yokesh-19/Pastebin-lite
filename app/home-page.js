@@ -45,17 +45,17 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
-      <div className="max-w-2xl mx-auto px-4">
-        <h1 className="text-3xl font-bold text-center mb-8">Pastebin Lite</h1>
+    <div className="h-screen bg-gray-50 flex items-center justify-center p-4">
+      <div className="w-full max-w-2xl">
+        <h1 className="text-3xl font-bold text-center mb-6">Pastebin Lite</h1>
         
-        <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-md p-6 mb-6">
+        <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-md p-6 mb-4">
           <div className="mb-4">
             <label className="block text-sm font-medium mb-2">Content *</label>
             <textarea
               value={content}
               onChange={(e) => setContent(e.target.value)}
-              className="w-full h-40 p-3 border rounded-md resize-none"
+              className="w-full h-32 p-3 border rounded-md resize-none"
               placeholder="Enter your text here..."
               required
             />
