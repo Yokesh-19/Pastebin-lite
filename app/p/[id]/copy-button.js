@@ -3,11 +3,7 @@
 import { useState } from 'react';
 import { Copy, Check } from 'lucide-react';
 
-interface CopyButtonProps {
-  content: string;
-}
-
-export default function CopyButton({ content }: CopyButtonProps) {
+export default function CopyButton({ content }) {
   const [copied, setCopied] = useState(false);
 
   const copyToClipboard = async () => {

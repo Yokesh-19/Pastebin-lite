@@ -6,13 +6,13 @@ import { Clock, Eye, ArrowLeft, Code2 } from 'lucide-react';
 import CopyButton from './copy-button';
 import DownloadButton from './download-button';
 
-export default async function PastePage({ params }: { params: Promise<{ id: string }> }) {
+export default async function PastePage({ params }) {
   const { id } = await params;
   const headersList = await headers();
   
   // Handle test mode timing
   const currentTime = process.env.TEST_MODE === '1' 
-    ? getTestTime(headersList as any)
+    ? getTestTime(headersList)
     : undefined;
   
   const paste = await getPaste(id, currentTime);
@@ -21,7 +21,7 @@ export default async function PastePage({ params }: { params: Promise<{ id: stri
     notFound();
   }
   
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString) => {
     const date = new Date(dateString);
     return date.toLocaleString('en-US', {
       year: 'numeric',

@@ -7,19 +7,19 @@ export default function Home() {
   const [content, setContent] = useState('');
   const [ttl, setTtl] = useState('');
   const [maxViews, setMaxViews] = useState('');
-  const [result, setResult] = useState<{id: string, url: string} | null>(null);
+  const [result, setResult] = useState(null);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [copied, setCopied] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setError('');
     setResult(null);
 
     try {
-      const body: any = { content };
+      const body = { content };
       if (ttl) body.ttl_seconds = parseInt(ttl);
       if (maxViews) body.max_views = parseInt(maxViews);
 
@@ -46,7 +46,7 @@ export default function Home() {
     }
   };
 
-  const copyToClipboard = async (text: string) => {
+  const copyToClipboard = async (text) => {
     try {
       await navigator.clipboard.writeText(text);
       setCopied(true);
@@ -107,7 +107,12 @@ export default function Home() {
                     value={content}
                     onChange={(e) => setContent(e.target.value)}
                     className="w-full h-48 p-4 border-2 border-gray-200 rounded-2xl resize-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/20 transition-all duration-200 font-mono text-sm bg-gray-50/50 text-gray-900"
-                    placeholder="Paste your code or text here...\n\n// Example:\nfunction hello() {\n  console.log('Hello, World!');\n}"
+                    placeholder="Paste your code or text here...
+
+// Example:
+function hello() {
+  console.log('Hello, World!');
+}"
                     required
                   />
                   <div className="text-xs text-gray-500 mt-2">

@@ -1,7 +1,7 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import { createPaste, getTestTime } from '@/lib/db';
 
-export async function POST(request: NextRequest) {
+export async function POST(request) {
   try {
     const body = await request.json();
     

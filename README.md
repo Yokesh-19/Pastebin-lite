@@ -9,7 +9,7 @@ A simple Pastebin clone built with Next.js for a take-home assignment.
 
 ## Tech Stack
 - Next.js 15 (App Router)
-- TypeScript
+- JavaScript
 - Vercel KV (Redis)
 - Tailwind CSS
 

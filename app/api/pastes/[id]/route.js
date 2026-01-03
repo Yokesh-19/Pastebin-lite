@@ -1,10 +1,7 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import { getPaste, getTestTime } from '@/lib/db';
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
-) {
+export async function GET(request, { params }) {
   const { id } = await params;
   
   // Handle test mode timing

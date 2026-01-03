@@ -2,12 +2,7 @@
 
 import { Download } from 'lucide-react';
 
-interface DownloadButtonProps {
-  content: string;
-  id: string;
-}
-
-export default function DownloadButton({ content, id }: DownloadButtonProps) {
+export default function DownloadButton({ content, id }) {
   const handleDownload = () => {
     const blob = new Blob([content], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);

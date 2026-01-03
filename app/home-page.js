@@ -6,18 +6,18 @@ export default function Home() {
   const [content, setContent] = useState('');
   const [ttl, setTtl] = useState('');
   const [maxViews, setMaxViews] = useState('');
-  const [result, setResult] = useState<{id: string, url: string} | null>(null);
+  const [result, setResult] = useState(null);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setError('');
     setResult(null);
 
     try {
-      const body: any = { content };
+      const body = { content };
       if (ttl) body.ttl_seconds = parseInt(ttl);
       if (maxViews) body.max_views = parseInt(maxViews);
 
