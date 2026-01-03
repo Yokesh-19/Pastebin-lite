@@ -13,7 +13,7 @@ A simple Pastebin clone built with Next.js for a take-home assignment. Create an
 *Clean, modern interface for creating pastes with optional TTL and view limits*
 
 ### Paste Creation
-![Paste Created](screenshots/paste-created.png)
+![Paste Created](screenshots/paste-created.png?v=2)
 *Success confirmation with shareable URL and paste details*
 
 ### Paste View
