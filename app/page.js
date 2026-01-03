@@ -107,7 +107,7 @@ export default function Home() {
                     value={content}
                     onChange={(e) => setContent(e.target.value)}
                     className="w-full h-32 p-3 border-2 border-gray-200 rounded-2xl resize-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/20 transition-all duration-200 font-mono text-sm bg-gray-50/50 text-gray-900"
-                    placeholder="Paste your code or text here...  // Example: function hello() { console.log('Hello, World!'); }"
+                    placeholder="Paste your code or text here... "
                     required
                   />
                   <div className="text-xs text-gray-500 mt-1">
