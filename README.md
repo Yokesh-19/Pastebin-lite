@@ -2,6 +2,10 @@
 
 A simple Pastebin clone built with Next.js for a take-home assignment. Create and share text pastes with optional expiry constraints.
 
+## 🚀 Live Demo
+
+**Deployed Application**: https://pastebin-lite-phi-seven.vercel.app
+
 ## How to Run Locally
 
 1. Clone the repository:
